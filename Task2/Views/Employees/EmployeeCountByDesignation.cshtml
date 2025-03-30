@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Task2.ViewModels.DesignationEmployeeCountViewModel>
+
+@{
+    ViewBag.Title = "Employee Count by Designation";
+}
+
+<h2>Employee Count by Designation</h2>
+
+<table class="table">
+    <tr>
+        <th>Designation Name</th>
+        <th>Employee Count</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.DesignationName</td>
+            <td>@item.EmployeeCount</td>
+        </tr>
+    }
+</table>
+
+@Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
